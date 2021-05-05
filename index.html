@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <title>Valida CNPJ/CPF</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        input {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        input[type=number]{
+            width: 200px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+
+        }
+    </style>
+
 </head>
+
 <body>
-    <input type="text" name="dado" id="dado">
+    <h1>Valida CNPJ e CPF</h1>
+    <input type="number" name="dado" id="dado" min="1" max="99999999999999" maxlength="14">
     <input type="button" value="validar" onclick="valida();">
 </body>
+
 </html>
